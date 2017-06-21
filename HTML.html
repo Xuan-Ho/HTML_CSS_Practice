@@ -1,0 +1,80 @@
+<!Doctype html>
+<html>
+    <head>
+
+        <title>HTML PRACTICE</title>
+
+        <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+
+        <style>
+            .TopNav{
+                overflow:hidden;
+                background-color:beige;
+                text-align: left;
+
+
+            }
+
+            .TopNav a{
+                text-align:center;
+                text-decoration:none;
+
+                font-family:fantasy;
+                color:black;
+                padding:1%;
+                float:left;
+            }
+
+            .TopNav a:hover{
+                font-style:italic;
+                color:darkred;
+                background-color:bisque;
+
+            }
+
+            #gundam:hover{
+                background-color: red;
+            }
+        </style>
+    </head>
+
+
+    <body>
+
+        <!-- TopNav -->
+        <div class="TopNav">
+            <img src="http://orig14.deviantart.net/b9ee/f/2010/205/1/0/gundam_render_by_transcendrealism.png"; height="40"; width="40"; id="gundam"; style="float:left" >
+            <a href="Home">Home</a>
+            <a href="Music">Music</a>
+            <a href="Video">Video</a>
+            <a href="About Us">About Us</a>
+        </div>
+
+        <!-- JavaScript Functions -->
+        <script type="text/javascript">
+            $("#gundam").click(function(){
+                alert("ITS A GUNDAM!!!");
+            });
+        </script>
+
+        <!-- Unordered Lists -->
+        <h2><b>Xuan: Unordered List</b></h2>
+        <ul>
+            <li>Xuan</li>
+            <li>Ho</li>
+            <li>Viet</li>
+        </ul>
+
+
+        <hr>
+
+        <!-- Ordered Lists -->
+        <h2><b>Xuan: Order List</b></h2>
+        <ol type="A">
+            <li>Xuan</li>
+            <li>Viet</li>
+            <li>Ho</li>
+        </ol>
+
+    </body>
+</html>
