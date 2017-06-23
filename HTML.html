@@ -7,6 +7,10 @@
         <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
 
         <style>
+            /*-CSS BOX MODELLING: http://www.yourhtmlsource.com/stylesheets/cssspacing.html
+              -Set "body" and "p" padding and margin to "0" if you want no white-space distance between each element
+              -Need to remember: z-axis, postion, opacity, float, margin, border, padding,
+            */
             .TopNav{
                 overflow:hidden;
                 background-color:beige;
@@ -21,8 +25,13 @@
 
                 font-family:fantasy;
                 color:black;
+                /*-Almost same as margin: Distance Area Away from inner-border of the object or element on the webpage
+                  -Padding also increase pixels width or height or both by add the padding pxiel to the width or height
+                */
                 padding:1%;
                 float:left;
+                /*-Distance Area Away from the Object or Element (our case: text) on the webpage*/
+                margin:1px;
             }
 
             .TopNav a:hover{
@@ -34,6 +43,25 @@
 
             #gundam:hover{
                 background-color: red;
+            }
+            .list{
+                position:relative;
+                right: -20px;
+                border-color:red;
+                background-color:navajowhite;
+                border: solid;
+                /*opacity:0.8;*/
+                background:rgba(255,255,255,0.7);
+                margin-right:40px;
+            }
+
+            body{
+                background-image:url(HTML5_Logo_512.png);
+
+            }
+
+            div li{
+
             }
         </style>
     </head>
@@ -58,23 +86,29 @@
         </script>
 
         <!-- Unordered Lists -->
-        <h2><b>Xuan: Unordered List</b></h2>
-        <ul>
-            <li>Xuan</li>
-            <li>Ho</li>
-            <li>Viet</li>
-        </ul>
+        <div class="list">
+            <h2><b>Xuan: Unordered List</b></h2>
+            <ul>
+                <li>Xuan</li>
+                <li>Ho</li>
+                <li>Viet</li>
+            </ul>
+        </div>
+
 
 
         <hr>
 
         <!-- Ordered Lists -->
-        <h2><b>Xuan: Order List</b></h2>
-        <ol type="A">
-            <li>Xuan</li>
-            <li>Viet</li>
-            <li>Ho</li>
-        </ol>
+        <div class="list">
+            <h2><b>Xuan: Order List</b></h2>
+            <ol type="A">
+                <li>Xuan</li>
+                <li>Viet</li>
+                <li>Ho</li>
+            </ol>
+        </div>
+
 
     </body>
 </html>
