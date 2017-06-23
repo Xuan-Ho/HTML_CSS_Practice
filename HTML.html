@@ -15,14 +15,16 @@
                 overflow:hidden;
                 background-color:beige;
                 text-align: left;
-
+                border:solid;
+                border-radius: 100px;
+                padding: 1px;
+                z-index:20;
 
             }
 
             .TopNav a{
                 text-align:center;
                 text-decoration:none;
-
                 font-family:fantasy;
                 color:black;
                 /*-Almost same as margin: Distance Area Away from inner-border of the object or element on the webpage
@@ -32,6 +34,7 @@
                 float:left;
                 /*-Distance Area Away from the Object or Element (our case: text) on the webpage*/
                 margin:1px;
+
             }
 
             .TopNav a:hover{
@@ -43,6 +46,10 @@
 
             #gundam:hover{
                 background-color: red;
+
+            }
+            #gundam{
+                border-radius: 999px;
             }
             .list{
                 position:relative;
@@ -50,21 +57,34 @@
                 border-color:red;
                 background-color:navajowhite;
                 border: solid;
+                border-color:black;
+                border-radius: 100px;
+
                 /*-opacity:0.8; This will changed the opacity for both background and Text
                   -background: rgba(red,green,blue,opacity); is a better way to fix this by use making the background tranparent
                 */
                 background:rgba(255,255,255,0.7);
                 margin-right:40px;
+                margin-top: 10px;
 
+                padding:200px;
             }
 
             body{
                 background-image:url(HTML5_Logo_512.png);
 
+
             }
 
-            div li{
+            #fixedid{
+                background-color:aqua;
+                border-radius: 50%;
+                padding:10px;
+                width:150px;
+                height:150px;
+                position:fixed;
 
+                right:0;
             }
         </style>
     </head>
@@ -72,14 +92,18 @@
 
     <body>
 
+
+
         <!-- TopNav -->
         <div class="TopNav">
-            <img src="http://orig14.deviantart.net/b9ee/f/2010/205/1/0/gundam_render_by_transcendrealism.png"; height="40"; width="40"; id="gundam"; style="float:left" >
+            <a><img src="http://orig14.deviantart.net/b9ee/f/2010/205/1/0/gundam_render_by_transcendrealism.png"; height="40"; width="40"; id="gundam"; style="float:left" ></a>
             <a href="Home">Home</a>
             <a href="Music">Music</a>
             <a href="Video">Video</a>
             <a href="About Us">About Us</a>
         </div>
+
+        <div id="fixedid"></div>
 
         <!-- JavaScript Functions -->
         <script type="text/javascript">
@@ -97,8 +121,6 @@
                 <li>Viet</li>
             </ul>
         </div>
-
-
 
         <hr>
 
