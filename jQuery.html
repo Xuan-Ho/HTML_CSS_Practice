@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <title>jQuery Tutorial</title>
+
+        <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+
+        <style>
+            #circle{
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                background-color: green;
+                margin: 10px;
+            }
+
+            .square{
+                width: 150px;
+                height: 150px;
+                background-color:red;
+                margin: 10px;
+            }
+
+            .topNavBar{
+                overflow: hidden;
+                background-color:bisque;
+
+            }
+
+            .topNavBar a{
+                float:left;
+                padding: 1% ;
+                display:block;
+                text-decoration: none;
+                text-align:center;
+                font-size: 25px;
+
+
+
+
+            }
+
+            .topNavBar a:hover{
+                background-color:azure;
+
+            }
+
+            .topNavBar a.active{
+                background-color:darkorange;
+                color:white;
+            }
+
+            #title{
+                background-color:antiquewhite;
+                text-align: center;
+                margin-bottom: auto;
+                font-family:serif;
+                color:chocolate;
+            }
+        </style>
+
+    </head>
+
+
+    <body>
+
+        <h1 id="title">ItsAGundam!</h1>
+
+
+        <div class="topNavBar" id="navbar">
+            <a><img src="HTML5_Logo_512.png"; float:left; height="30"; width="30";></a>
+            <a class="active" href="jQuery.html">Home</a>
+            <a href="HTML5_Logo_512.png">Pictures</a>
+            <a href="Videos">Videos</a>
+            <a href="Resume">Resume</a>
+            <a href="index.html">Project</a>
+            <a src="HTML5_Logo_512.png"></a>
+
+        </div>
+
+        <div id="circle"></div>
+
+        <div  class="square"></div>
+        <div class="square"></div>
+        <iframe src="https://www.ecowebhosting.co.uk"; float:right;></iframe>
+        <script types="text/javascript">
+
+            //you can also use div instead of . or #
+            $("#circle").click(function(){
+
+                alert("cirlce was clicked!");
+            });
+
+            $(".square").hover(function(){
+                alert("Square was hovered over!");
+            });
+
+            $("#circle").hover(function(){
+                $("iframe").attr("src", "https://www.n4g.com");
+            });
+
+
+        </script>
+
+    </body>
+</html>

@@ -9,7 +9,7 @@
         <style>
             /*-CSS BOX MODELLING: http://www.yourhtmlsource.com/stylesheets/cssspacing.html
               -Set "body" and "p" padding and margin to "0" if you want no white-space distance between each element
-              -Need to remember: z-axis, postion, opacity, float, margin, border, padding,
+              -Need to remember: z-axis, postion, opacity, float, margin, border, padding,top, left, right, bottom, width, height
             */
             .TopNav{
                 overflow:hidden;
@@ -17,8 +17,9 @@
                 text-align: left;
                 border:solid;
                 border-radius: 100px;
-                padding: 1px;
+                padding-right: 100px;
                 z-index:21;
+
 
             }
 
@@ -51,14 +52,14 @@
             #gundam{
                 border-radius: 999px;
             }
-            .list{
+            .post{
                 position:relative;
                 right: -20px;
                 border-color:red;
                 background-color:navajowhite;
                 border: solid;
                 border-color:black;
-                border-radius: 100px;
+                border-radius: 30px;
 
                 /*-opacity:0.8; This will changed the opacity for both background and Text
                   -background: rgba(red,green,blue,opacity); is a better way to fix this by use making the background tranparent
@@ -66,7 +67,8 @@
                 background:rgba(255,255,255,0.7);
                 margin-right:40px;
                 margin-top: 10px;
-                padding:200px;
+                padding:90px;
+
             }
 
             body{
@@ -74,7 +76,8 @@
 
 
             }
-            <!-- Top, Bottom, Left, and Right use to positinng the element but doesnt work on Button element (instead use padding)
+            /*Top, Bottom, Left, and Right use to positinng the element but doesnt work on Button element (instead use padding)
+            */
             #fixedid{
                 background-color:aqua;
                 border-radius: 50%;
@@ -84,7 +87,7 @@
                 position:fixed;
                 margin-right: 400px;
                 z-index: 100;
-                right:-100px;
+                right:-470px;
             }
             /*<!-- Adding Div on button tag element, make it positionable or easier*/
             #Button1{
@@ -93,6 +96,13 @@
                 text-align:center;
                 padding-left: 500px;
                 right:10px;
+
+            }
+            p{
+                color:darkred;
+            }
+            font{
+                color:darkred;
 
             }
         </style>
@@ -129,7 +139,7 @@
         </script>
 
         <!-- Unordered List -->
-        <div class="list">
+        <div class="post">
             <h2><b>Xuan: Unordered List</b></h2>
             <ul>
                 <li>Xuan</li>
@@ -141,7 +151,7 @@
         <hr>
 
         <!-- Ordered List -->
-        <div class="list">
+        <div class="post">
             <h2><b>Xuan: Order List</b></h2>
             <ol type="A">
                 <li>Xuan</li>
@@ -150,6 +160,30 @@
             </ol>
         </div>
 
+        <hr>
+
+        <!-- Creating a Form
+             -You can't add inline Style to tag elements head and other like it*/
+             -Use "value" attribute to show text or whatever
+             -Can use <button></button> for Buttons
+        -->
+        <form class="post">
+            <span style="font-size:22px"><h3><b><u>Questions about Xuan</u></b></h3></span>
+            <p>Question1: What is Xuan's nickname? <input type="text"></p>
+            <p>Question2: How old is Xuan? <input type="number"></p>
+            <font>Question3: Is Xuan a make male or female name?</font>
+            Male</red> <input type="checkbox" name="sex">
+            Female <input type="checkbox" name="sex">
+            Both <input type="radio" name="sex">
+            <p>Is Xuan a Male or Female?
+                <select>
+                    <option></option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Bisexual</option>
+                </select></p>
+            <p style:><input type="submit" value="Click To Submit!"></p>
+        </form>
 
     </body>
 </html>
