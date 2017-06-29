@@ -74,16 +74,26 @@
 
 
             }
-
+            <!-- Top, Bottom, Left, and Right use to positinng the element but doesnt work on Button element (instead use padding)
             #fixedid{
                 background-color:aqua;
                 border-radius: 50%;
-                padding:10px;
+                padding-right: 20px;
                 width:150px;
                 height:150px;
                 position:fixed;
+                margin-right: 400px;
+                z-index: 100;
+                right:-100px;
+            }
+            /*<!-- Adding Div on button tag element, make it positionable or easier*/
+            #Button1{
+                border:20px;
+                margin-top: 10px;
+                text-align:center;
+                padding-left: 500px;
+                right:10px;
 
-                right:0;
             }
         </style>
     </head>
@@ -102,6 +112,13 @@
             <a href="About Us">About Us</a>
         </div>
 
+        <!-- Adding Div on button help position it easier -->
+        <div id="Button1">
+            <Button>Click Me!</Button>
+            <Button>Click Here!</Button>
+        </div>
+
+        <!-- fixed circle on the page -->
         <div id="fixedid"></div>
 
         <!-- JavaScript Functions -->
@@ -111,7 +128,7 @@
             });
         </script>
 
-        <!-- Unordered Lists -->
+        <!-- Unordered List -->
         <div class="list">
             <h2><b>Xuan: Unordered List</b></h2>
             <ul>
@@ -123,7 +140,7 @@
 
         <hr>
 
-        <!-- Ordered Lists -->
+        <!-- Ordered List -->
         <div class="list">
             <h2><b>Xuan: Order List</b></h2>
             <ol type="A">
@@ -132,8 +149,7 @@
                 <li>Ho</li>
             </ol>
         </div>
-        <h>This is cool!</h>
-        <p>asdhasdhjkajkfgkjashkjd</p>
+
 
     </body>
 </html>
