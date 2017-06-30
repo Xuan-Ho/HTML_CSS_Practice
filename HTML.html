@@ -72,14 +72,15 @@
             }
 
             body{
-                background-image:url(HTML5_Logo_512.png);
-
+                background-image:url(https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/SJSU_Seal.svg/1200px-SJSU_Seal.svg.png);
+                background-size:contain;
+                background-repeat: no-repeat;
+                background-position:center
 
             }
             /*Top, Bottom, Left, and Right use to positinng the element but doesnt work on Button element (instead use padding)
             */
-            #fixedid{
-                background-color:aqua;
+            #fixedid img{
                 border-radius: 50%;
                 padding-right: 20px;
                 width:150px;
@@ -122,21 +123,11 @@
             <a href="About Us">About Us</a>
         </div>
 
-        <!-- Adding Div on button help position it easier -->
-        <div id="Button1">
-            <Button>Click Me!</Button>
-            <Button>Click Here!</Button>
-        </div>
+
 
         <!-- fixed circle on the page -->
-        <div id="fixedid"></div>
+        <div id="fixedid"><a><img src="http://www.sjsu.edu/provost/pics/SJSU%20University%20Spirit%20mark_Web_Blue.png"></a></div>
 
-        <!-- JavaScript Functions -->
-        <script type="text/javascript">
-            $("#gundam").click(function(){
-                alert("ITS A GUNDAM!!!");
-            });
-        </script>
 
         <!-- Unordered List -->
         <div class="post">
@@ -168,10 +159,10 @@
              -Can use <button></button> for Buttons
         -->
         <form class="post">
-            <span style="font-size:22px"><h3><b><u>Questions about Xuan</u></b></h3></span>
-            <p>Question1: What is Xuan's nickname? <input type="text"></p>
-            <p>Question2: How old is Xuan? <input type="number"></p>
-            <font>Question3: Is Xuan a make male or female name?</font>
+            <span style="font-size:22px"><h3 ><b><u>Questions about Xuan</u></b></h3></span>
+            <p>Question1: What is Xuan's nickname? <input type="text" placeholder="Enter Name here"></p>
+            <p>Question2: How old is Xuan? <input type="number" placeholder="Enter Age Here"></p>
+            <font>Question3: Is Xuan a male or female name?</font>
             Male</red> <input type="checkbox" name="sex">
             Female <input type="checkbox" name="sex">
             Both <input type="radio" name="sex">
@@ -182,8 +173,61 @@
                     <option>Female</option>
                     <option>Bisexual</option>
                 </select></p>
-            <p style:><input type="submit" value="Click To Submit!"></p>
+            <p><input type="submit" value="Click To Submit!" id=submitted></p>
         </form>
+
+        <!-- Adding Div on button help position it easier -->
+        <div id="Button1">
+            <Button id="buttn0">Click Me!</Button>
+            <!-- Inline Javacript: Not reccommended as it get very messy-->
+            <Button onclick=alert("Hi"); id="buttn">Click Here!</Button>
+            <br>
+            <input type="text" id="inputBox">
+            <button id="alertText">Click Will Prompt</button>
+            <p id="testP">For Testing</p>
+        </div>
+
+
+
+         <!-- JavaScript Functions -->
+        <script type="text/javascript">
+            /*use to change(Edit) and manipulate HTML and CSS*/
+
+            //Onclick Gundam Image
+            $("#gundam").click(function(){
+                alert("ITS A GUNDAM!!!");
+            });
+            // Changed the innerHTML text the button2 element
+            document.getElementById("buttn").innerHTML = "'innerHTML is Changed!'";
+            //Create an alert and change the text of the button1
+            //If you want to change CSS and not HTML, use (...).style.color ="..."; instead
+            //.style.display = "none" set CSS display property to none, delete, and remove from the flow
+            document.getElementById("buttn0").onclick = function(){
+                alert("Onclicked Action!");
+                document.getElementById("buttn0").innerHTML =document.getElementById("buttn0").innerHTML+" Was Clicked Before!";
+            };
+            //Alert the inputted Name on the Input's Box and change text
+            document.getElementById("alertText").onclick = function(){
+                var inputAlert; //initializing
+
+                inputAlert = document.getElementById("inputBox").value;//get and set value on variable inputAlert
+
+                document.getElementById("testP").innerHTML="Yes! Test Paragraph Changed!"; //change text
+
+                alert(inputAlert); //prompt
+            };
+
+            //array example
+            var arrayEx = new Array();
+            arrayEx[0] = "Xuan";
+
+            var arrayFriends = [arrayEx[0], "Trung", "Alex", "Darwin", "SomeGuy!"];
+            alert("One of Xuan's friends is " + arrayFriends[3]);
+            console.log(arrayFriends);
+
+
+        </script>
+
 
     </body>
 </html>
