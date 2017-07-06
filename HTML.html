@@ -4,6 +4,7 @@
 
         <title>HTML PRACTICE AND Testing</title>
 
+        <!-- lOCAL Embedding of JQUERY-->
         <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
 
         <style>
@@ -188,6 +189,9 @@
         </div>
 
 
+        <div id="theBody" class="post">Post stuff</div>
+        <div id="theBody2" class="post">Post stuff</div>
+        <div id="theBody3" class="post">Post stuff</div>
 
          <!-- JavaScript Functions -->
         <script type="text/javascript">
@@ -210,11 +214,11 @@
             document.getElementById("alertText").onclick = function(){
                 var inputAlert; //initializing
 
-                inputAlert = document.getElementById("inputBox").value;//get and set value on variable inputAlert
+                inputAlert = document.getElementById("inputBox").value;//get and set box value to variable inputAlert
 
                 document.getElementById("testP").innerHTML="Yes! Test Paragraph Changed!"; //change text
 
-                alert(inputAlert); //prompt
+                ////alert(inputAlert); //prompt
             };
 
             //array example
@@ -222,9 +226,52 @@
             arrayEx[0] = "Xuan";
 
             var arrayFriends = [arrayEx[0], "Trung", "Alex", "Darwin", "SomeGuy!"];
-            alert("One of Xuan's friends is " + arrayFriends[3]);
-            console.log(arrayFriends);
+            ////alert("Xuan's friends are: " + arrayFriends.toString());
+            ////console.log(arrayFriends);
 
+            /*if statement
+            if(arrayFriends.length == "Alex"){
+                console.log("Alex is within the friends' array");
+            }else{
+                console.log("Alex is not in the array");
+            }
+            */
+
+
+            //forloop: twitter tweets displayer of multiple <p></p>
+            var tweetString = "";
+            var tweets = ["Disney's movies", "DC's Movies", "Marvel's Movies"];
+            var j = 0;
+
+            for(var i = 0; i<10; i++){
+                tweetString = tweetString +"<p>"+"forLoop: "+ tweets[i] +" are good movies!"+"</p>";
+                document.getElementById("theBody").innerHTML = tweetString;
+            }
+
+            while(j < 10){
+                tweetString = tweetString +"<p>" + "whileLoop: j is not 10" + "</p>";
+                document.getElementById("theBody2").innerHTML = tweetString;
+                j++;
+            }
+
+            //JQuery test if installed
+            /*
+            if(jQuery == "undefined"){
+                alert("JQuery is not installed!");
+            }else{
+                alert("jquery is installed");
+            }
+            */
+
+            //JQUERY ClICK EXERCISE
+            $("#fixedid").click(function(){
+                alert("Circle was clicked!");
+            });
+
+            $("#theBody3").html("HTML ELEMENT WAS CHANGED USINGgg JQUERY");
+
+            $("#fixedid").hover(function(){
+                $("#fixedid").hide();
 
         </script>
 
