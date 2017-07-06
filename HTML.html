@@ -263,15 +263,32 @@
             }
             */
 
-            //JQUERY ClICK EXERCISE
+            /*JQUERY ClICK EXERCISE
+                1. Javascrapt using different syntax for CSS properties
+                EX: width:400px; = with:"400px";
+                    margin-left  = marginLeft
+                     - so no "-" sign instead removed and capitalized the letter after it
+            */
+            //FadingOut and alert---Remember fadeIn() too
             $("#fixedid").click(function(){
-                alert("Circle was clicked!");
+                $(this).fadeOut("slower", function(){
+                    alert("fadeout has finished!");
+                });
             });
-
-            $("#theBody3").html("HTML ELEMENT WAS CHANGED USINGgg JQUERY");
-
+            //change inner html
+            $("#theBody3").html("HTML ELEMENT WAS CHANGED USINGg JQUERY");
+            //On Hover the element will fade
             $("#fixedid").hover(function(){
-                $("#fixedid").hide();
+                //$("#fixedid img").css("width", "2000%");
+
+                //Animated On Hover: 6000 miliseconds = 6 seconds
+                $("#fixedid img").animate({
+                    width:"20%",
+                    height:"20%",
+                    marginTop:"100px",
+                    marginRight:"800px",
+                }, 2000);
+            });
 
         </script>
 
