@@ -1,0 +1,3 @@
+Xuan is a pretty cool guy!
+<br>
+AjAX test sucessful
