@@ -7,7 +7,7 @@
         <!-- lOCAL Embedding of JQUERY-->
         <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
         <!-- linking jQuery UI -->
-        <link href="jquery-ui.min.css">
+        <link rel="stylesheet" type="text/css" href="jquery-ui.min.css">
         <script type="text/javascript" src="jquery-ui.min.js"></script>
 
         <style>
@@ -110,6 +110,11 @@
                 color:darkred;
 
             }
+            #resizable{
+                border-style:dotted;
+
+
+            }
         </style>
     </head>
 
@@ -197,7 +202,7 @@
         <div id="theBody3" class="post">Post stuff</div>
         <div id="theBody4" class="post">Postt stuff</div>
         <div id="theBody5" class="post">Post stuff</div>
-        <div id="theBody6" class="post"><img src="HTML5_Logo_512.png"></div>
+        <div id="theBody6" class="post"><img id="resizable" src="HTML5_Logo_512.png"></div>
          <!-- JavaScript Functions -->
         <script type="text/javascript">
             /*use to change(Edit) and manipulate HTML and CSS*/
@@ -307,7 +312,8 @@
             /*jQuery UI*/
             $("#theBody4").draggable({containment: "parents"});
             //Resizeable
-            $("#theBody6").resize();
+            $("#theBody6").draggable();
+            $("#resizable").resizable();
         </script>
 
 
